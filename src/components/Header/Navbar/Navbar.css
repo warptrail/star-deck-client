@@ -1,0 +1,26 @@
+.main_menu ul {
+  display: flex;
+}
+.main_menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+.main_menu a,
+.main_menu button {
+  color: #429cc8;
+  text-decoration: none;
+}
+
+.main_menu button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.main_menu button:focus {
+  outline: none;
+}
+.main_menu a:hover,
+.main_menu button:hover {
+  color: #c842b3;
+}
