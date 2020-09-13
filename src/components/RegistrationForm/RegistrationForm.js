@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class LoginForm extends Component {
+class RegistrationForm extends Component {
   static defaultProps = {
-    onLoginSuccess: () => {}
+    onRegistrationSuccess: () => {}
   };
 
   state = { error: null };
@@ -20,10 +20,14 @@ class LoginForm extends Component {
           <label htmlFor="password_input">Password</label>
           <input required name="password" id="password_input" />
         </div>
-        <button type="submit">Login</button>
+        <div className="password_again">
+          <label htmlFor="password_again_input">Enter Password Again</label>
+          <input required name="password" id="password_again_input" />
+        </div>
+        <button type="submit">Register</button>
       </form>
     );
   }
 }
 
-export default LoginForm;
+export default RegistrationForm;

@@ -48,10 +48,11 @@ class Navbar extends Component {
   }
 
   render() {
+    const { isLoggedIn } = this.state;
     return (
       <nav className="main_menu">
         <ul>
-          {this.state.isLoggedIn
+          {isLoggedIn
             ? this.renderLogoutLink()
             : this.renderLoginRegisterLinks()}
           <li>
