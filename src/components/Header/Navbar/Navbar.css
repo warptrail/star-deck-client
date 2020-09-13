@@ -1,9 +1,10 @@
 .main_menu ul {
   display: flex;
+  flex-wrap: wrap;
 }
 .main_menu li {
   list-style: none;
-  margin: 0 10px;
+  margin: 10px;
 }
 .main_menu a,
 .main_menu button {

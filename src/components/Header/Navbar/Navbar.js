@@ -56,6 +56,12 @@ class Navbar extends Component {
             ? this.renderLogoutLink()
             : this.renderLoginRegisterLinks()}
           <li>
+            <Link to="/see-drops">See Drops</Link>
+          </li>
+          <li>
+            <Link to="/post-drops">Post Drops</Link>
+          </li>
+          <li>
             <button type="button" href="#">
               Roll a d-20
             </button>

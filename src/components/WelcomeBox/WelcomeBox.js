@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from 'react';
 
 import './WelcomeBox.css';
@@ -13,8 +14,18 @@ class WelcomeBox extends Component {
           abilities.
         </p>
         <p>
-          Please register and login to use this amazing service. All your dreams
-          will come true. You just have to believe!
+          Please register and login to use this amazing service. There will be
+          cupcakes and punch at some point in your future.
+        </p>
+        <p>
+          If you are an alien of the seventh dimension, please click this link:{' '}
+          <a
+            className="alien"
+            href="https://quantum-warp-dynamics.tumblr.com/"
+            target="_blank"
+          >
+            ⍙⟒⌰☊⍜⋔⟒
+          </a>
         </p>
       </div>
     );

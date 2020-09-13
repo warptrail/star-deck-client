@@ -5,6 +5,9 @@ import Header from '../components/Header/Header';
 import LoginPage from '../routes/LoginPage/LoginPage';
 import LandingPage from '../routes/LandingPage/LandingPage';
 import RegistrationPage from '../routes/RegistrationPage/RegistrationPage';
+import SeeDropPage from '../routes/SeeDropPage/SeeDropPage';
+import PostDropPage from '../routes/PostDropPage/PostDropPage';
+import NotFoundPage from '../routes/NotFoundPage/NotFoundPage';
 
 import './App.css';
 
@@ -27,6 +30,9 @@ export default class App extends Component {
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/register" component={RegistrationPage} />
+            <Route exact path="/see-drops" component={SeeDropPage} />
+            <Route exact path="/post-drops" component={PostDropPage} />
+            <Route component={NotFoundPage} />
           </Switch>
         </main>
       </div>
