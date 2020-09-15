@@ -27,7 +27,8 @@ class SeeDropPage extends Component {
   };
 
   addDrop = (drop) => {
-    this.setDrops([...this.state.drops, drop]);
+    const { drops } = this.state;
+    this.setDrops([...drops, drop]);
   };
 
   clearError() {

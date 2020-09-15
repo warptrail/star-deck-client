@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import TokenService from '../../../services/token-service';
+
 import './Navbar.css';
 
 class Navbar extends Component {
-  state = {
-    isLoggedIn: false
-  };
-
   handleLogoutClick = () => {
     // TokenService.clearAuthToken();
-    this.setState({ isLoggedIn: false }); // Going to delete this
+    const { hasAuthToken, setAuthToken } = this.props;
     console.log(
       'imagine you are being logged out of the reality simulation...'
     );
+    TokenService.clearAuthToken();
+    setAuthToken(false);
   };
 
   handleLoginClick = () => {
     // Going to delete this
     console.log('What is Real?');
-    this.setState({ isLoggedIn: true });
   };
 
   renderLogoutLink() {
@@ -48,18 +47,17 @@ class Navbar extends Component {
   }
 
   render() {
-    const { isLoggedIn } = this.state;
+    const { hasAuthToken } = this.props;
+    console.log(hasAuthToken);
     return (
       <nav className="main_menu">
         <ul>
-          {isLoggedIn
+          {hasAuthToken
             ? this.renderLogoutLink()
             : this.renderLoginRegisterLinks()}
+
           <li>
-            <Link to="/see-drops">See Drops</Link>
-          </li>
-          <li>
-            <Link to="/post-drops">Post Drops</Link>
+            <Link to="/drops">Drops</Link>
           </li>
           <li>
             <button type="button" href="#">

@@ -7,14 +7,13 @@ class DropForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { addDrop } = this.props;
-    console.log(addDrop);
+
     const { title, content } = e.target;
     const data = {
       title: title.value,
       content: content.value
     };
 
-    console.log(data);
     DropApiService.postDrop(data)
       .then(addDrop)
       .then(() => {
@@ -27,7 +26,6 @@ class DropForm extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <form className="add_drop_form" onSubmit={this.handleSubmit}>
         <div>

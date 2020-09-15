@@ -6,6 +6,8 @@ import './Header.css';
 
 class Header extends Component {
   render() {
+    const { hasAuthToken, setAuthToken } = this.props;
+    console.log(this.props);
     return (
       <header>
         <Link to="/">
@@ -13,7 +15,7 @@ class Header extends Component {
             Warptrail React Application Interface
           </h1>
         </Link>
-        <Navbar />
+        <Navbar hasAuthToken={hasAuthToken} setAuthToken={setAuthToken} />
       </header>
     );
   }
